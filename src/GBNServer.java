@@ -7,8 +7,8 @@ import java.net.SocketException;
 /**
  * 服务器端
  */
-public class GBNServer extends Thread {
-private int sendport=8080;
+public class GBNServer implements Runnable {
+private int sendport=9090;
 private DatagramSocket senfSocket;
 private DatagramPacket sendPacket;
 private int base =1;
@@ -56,6 +56,10 @@ public GBNServer(){
      */
     public boolean Ensure(int seq){
         return true;
+
+    }
+    @Override
+    public void run(){
 
     }
 }

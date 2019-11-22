@@ -1,6 +1,6 @@
 public class Test {
     public static void main(String[] args) throws Exception {
-        GBNServer gbnServer=new GBNServer();
-
+        new Thread(new GBNServer()).start();
+        new Thread(new GBNClient()).start();
     }
 }
