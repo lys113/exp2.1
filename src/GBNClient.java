@@ -20,7 +20,7 @@ public GBNClient() throws UnknownHostException, SocketException {
      * @return 对单个序号进行确认
      */
     private boolean ackone(int seq) {
-        String temp=rece.substring(rece.indexOf("@:")+2).trim();
+        String temp=rece.substring(rece.indexOf("#:")+2).trim();
         int index;
         if(temp!="-") {
             index = Integer.parseInt(temp);
